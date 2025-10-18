@@ -1,0 +1,9 @@
+# Arquivos originais das imagens (já copiadas para /images)
+*.jpeg
+*.jpg
+*.png
+
+# Mas manter as imagens da pasta images/
+!images/*.jpeg
+!images/*.jpg
+!images/*.png

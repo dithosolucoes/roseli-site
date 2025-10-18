@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roseli de Sales - Perita Judicial & Extrajudicial</title>
+    <meta name="description" content="Perita Contábil especialista em contratos bancários, questões trabalhistas e superendividamento. Análise técnica e imparcial para garantir a justiça que você merece." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-blue': '#0A192F',
+              'brand-gold': '#D4AF37',
+              'brand-light': '#F8F9FA',
+              'brand-gray': '#6c757d',
+            },
+            fontFamily: {
+              'sans': ['Montserrat', 'sans-serif'],
+              'serif': ['Playfair Display', 'serif'],
+            },
+            keyframes: {
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+            },
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+</head>
+<body class="bg-brand-light font-sans text-brand-gray">
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#inicio" class="focus:outline-none flex items-center space-x-3 text-white">
+          <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="50" fill="#0A192F"/>
+            <path d="M38 75V25H55C65 25 70 30 70 40C70 50 65 55 55 55H46V47H55C60 47 62 45 62 40C62 35 60 33 55 33H46V75H38Z" fill="#D4AF37"/>
+            <path d="M62 75V60C62 55 65 52 70 52C75 52 78 55 78 60V75H70V60C70 58 69 57 68 57C67 57 66 58 66 60V75H62Z" fill="#D4AF37" transform="translate(-15, 0) scale(1.2)"/>
+          </svg>
+          <span class="font-serif text-2xl font-bold tracking-wider">Roseli de Sales</span>
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#sobre" class="text-white hover:text-brand-gold transition-colors duration-300">Sobre</a>
+          <a href="#servicos" class="text-white hover:text-brand-gold transition-colors duration-300">Serviços</a>
+          <a href="#cases" class="text-white hover:text-brand-gold transition-colors duration-300">Resultados</a>
+          <a href="#livro" class="text-white hover:text-brand-gold transition-colors duration-300">Livro</a>
+          <a href="#depoimentos" class="text-white hover:text-brand-gold transition-colors duration-300">Depoimentos</a>
+          <a href="#contato" class="text-white hover:text-brand-gold transition-colors duration-300">Contato</a>
+          <a href="https://wa.me/5531985883978?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20uma%20especialista." target="_blank" rel="noopener noreferrer" class="bg-brand-gold text-brand-blue font-bold py-2 px-6 rounded-full hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105">
+            Fale com uma Especialista
+          </a>
+        </nav>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-white focus:outline-none z-50 relative">
+            <i data-lucide="menu" id="menu-icon-open"></i>
+            <i data-lucide="x" id="menu-icon-close" class="hidden"></i>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden bg-brand-blue/95 transition-all duration-300 ease-in-out overflow-hidden max-h-0">
+          <nav class="flex flex-col items-center space-y-4 py-8">
+            <a href="#sobre" class="mobile-nav-link text-white text-lg hover:text-brand-gold transition-colors duration-300">Sobre</a>
+            <a href="#servicos" class="mobile-nav-link text-white text-lg hover:text-brand-gold transition-colors duration-300">Serviços</a>
+            <a href="#cases" class="mobile-nav-link text-white text-lg hover:text-brand-gold transition-colors duration-300">Resultados</a>
+            <a href="#livro" class="mobile-nav-link text-white text-lg hover:text-brand-gold transition-colors duration-300">Livro</a>
+            <a href="#depoimentos" class="mobile-nav-link text-white text-lg hover:text-brand-gold transition-colors duration-300">Depoimentos</a>
+            <a href="#contato" class="mobile-nav-link text-white text-lg hover:text-brand-gold transition-colors duration-300">Contato</a>
+            <a href="https://wa.me/5531985883978?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20uma%20especialista." target="_blank" rel="noopener noreferrer" class="mt-4 bg-brand-gold text-brand-blue font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition-all duration-300">
+              Fale com uma Especialista
+            </a>
+          </nav>
+        </div>
+    </header>
+    <main>
+        <section id="inicio" class="relative h-screen flex items-center justify-center text-white bg-brand-blue">
+          <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style="background-image: url('images/hero-background.jpeg')"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-blue via-brand-blue/70 to-transparent"></div>
+          <div class="relative z-10 text-center px-6 reveal visible">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-extrabold mb-4 leading-tight">
+              Defendendo Seus Direitos com Precisão Financeira
+            </h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-300">
+              Perita Contábil especialista em contratos bancários, questões trabalhistas e superendividamento. Análise técnica e imparcial para garantir a justiça que você merece.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="https://wa.me/5531985883978?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20uma%20especialista." target="_blank" rel="noopener noreferrer" class="bg-brand-gold text-brand-blue font-bold py-3 px-8 rounded-full text-lg hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                Analisar meu Caso
+              </a>
+              <a href="#audience" class="bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-8 rounded-full text-lg hover:bg-brand-gold hover:text-brand-blue transition-all duration-300 w-full sm:w-auto">
+                Para Advogados
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="sobre" class="py-20 bg-white overflow-hidden">
+          <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div class="order-2 md:order-1 reveal">
+                <h2 class="text-4xl font-serif font-bold text-brand-blue mb-4">Roseli de Sales</h2>
+                <p class="text-brand-gold text-lg font-semibold mb-6">Contadora, Mentora, Escritora e Mãe.</p>
+                <p class="mb-4">
+                  Com mais de uma década de experiência, minha missão é traduzir a complexidade dos números em argumentos claros e decisivos. Atuo como Perita Judicial e Assistente Técnica, oferecendo suporte especializado para advogados, empresas e pessoas físicas em busca de seus direitos.
+                </p>
+                <p class="mb-6">
+                  Acredito que o conhecimento técnico é a chave para a justiça. Por isso, além do meu trabalho pericial, dedico-me a mentorar novos profissionais e a compartilhar meu conhecimento através de livros e cursos, capacitando outros a trilharem um caminho de sucesso.
+                </p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-center">
+                  <div class="bg-brand-light p-4 rounded-lg shadow-sm">
+                      <p data-target="10" class="animated-stat text-3xl font-bold text-brand-blue">+0</p>
+                      <p class="text-sm text-brand-gray">Anos de Experiência</p>
+                  </div>
+                  <div class="bg-brand-light p-4 rounded-lg shadow-sm">
+                      <p data-target="500" class="animated-stat text-3xl font-bold text-brand-blue">+0</p>
+                      <p class="text-sm text-brand-gray">Casos Analisados</p>
+                  </div>
+                  <div class="bg-brand-light p-4 rounded-lg shadow-sm">
+                      <p data-target="100" class="animated-stat text-3xl font-bold text-brand-blue">+0</p>
+                      <p class="text-sm text-brand-gray">Clientes Satisfeitos</p>
+                  </div>
+                </div>
+              </div>
+              <div class="order-1 md:order-2 flex justify-center group reveal">
+                <div class="relative w-full max-w-sm">
+                  <div class="absolute -inset-2 bg-brand-gold rounded-lg transition-transform duration-300 group-hover:rotate-[-3deg] group-hover:scale-105"></div>
+                  <img src="images/roseli-portrait.jpeg" alt="Roseli de Sales" class="relative w-full h-auto rounded-lg shadow-2xl object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="timeline" class="overflow-hidden bg-brand-blue py-20 text-white">
+            <div class="container mx-auto px-6">
+                <div class="mb-16 text-center reveal">
+                    <h2 class="mb-4 text-4xl font-serif font-bold">Uma Jornada de Expertise</h2>
+                    <p class="mx-auto max-w-2xl text-gray-300">Mais de uma década dedicada a transformar números em justiça.</p>
+                </div>
+                <div class="relative h-full overflow-hidden wrap md:p-10">
+                    <div class="absolute h-full border-2 border-gray-400 border-opacity-20 left-[23px] md:left-1/2 md:-translate-x-px"></div>
+                    <div class="mb-8 flex w-full items-start md:items-center md:justify-between md:flex-row-reverse reveal">
+                        <div class="order-1 hidden md:block md:w-5/12"></div>
+                        <div class="z-20 order-1 flex shrink-0 items-center rounded-full bg-brand-gold shadow-xl w-12 h-12">
+                            <h1 class="mx-auto text-lg font-semibold text-brand-blue">2010</h1>
+                        </div>
+                        <div class="order-1 w-full flex-1 rounded-lg bg-gray-800 px-6 py-4 shadow-xl md:ml-0 md:w-5/12 ml-4">
+                            <h3 class="mb-3 text-xl font-bold text-brand-gold">Início da Carreira</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-300">Graduação em Ciências Contábeis e início da jornada profissional no mundo corporativo.</p>
+                        </div>
+                    </div>
+                    <div class="mb-8 flex w-full items-start md:items-center md:justify-between reveal">
+                        <div class="order-1 hidden md:block md:w-5/12"></div>
+                        <div class="z-20 order-1 flex shrink-0 items-center rounded-full bg-brand-gold shadow-xl w-12 h-12">
+                            <h1 class="mx-auto text-lg font-semibold text-brand-blue">2015</h1>
+                        </div>
+                        <div class="order-1 w-full flex-1 rounded-lg bg-gray-800 px-6 py-4 shadow-xl md:ml-0 md:w-5/12 ml-4">
+                            <h3 class="mb-3 text-xl font-bold text-brand-gold">Transição para Perícia</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-300">Especialização em Perícia Contábil e primeiros passos como autônoma na área.</p>
+                        </div>
+                    </div>
+                    <div class="mb-8 flex w-full items-start md:items-center md:justify-between md:flex-row-reverse reveal">
+                        <div class="order-1 hidden md:block md:w-5/12"></div>
+                        <div class="z-20 order-1 flex shrink-0 items-center rounded-full bg-brand-gold shadow-xl w-12 h-12">
+                            <h1 class="mx-auto text-lg font-semibold text-brand-blue">2018</h1>
+                        </div>
+                        <div class="order-1 w-full flex-1 rounded-lg bg-gray-800 px-6 py-4 shadow-xl md:ml-0 md:w-5/12 ml-4">
+                            <h3 class="mb-3 text-xl font-bold text-brand-gold">Nomeação como Perita Judicial</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-300">Conquista da primeira nomeação como Perita do Juízo, um marco de credibilidade.</p>
+                        </div>
+                    </div>
+                     <div class="mb-8 flex w-full items-start md:items-center md:justify-between reveal">
+                        <div class="order-1 hidden md:block md:w-5/12"></div>
+                        <div class="z-20 order-1 flex shrink-0 items-center rounded-full bg-brand-gold shadow-xl w-12 h-12">
+                            <h1 class="mx-auto text-lg font-semibold text-brand-blue">2022</h1>
+                        </div>
+                        <div class="order-1 w-full flex-1 rounded-lg bg-gray-800 px-6 py-4 shadow-xl md:ml-0 md:w-5/12 ml-4">
+                            <h3 class="mb-3 text-xl font-bold text-brand-gold">Lançamento do Livro</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-300">Co-autora do livro 'Perícia Bancária: Casos Práticos', consolidando-se como referência nacional.</p>
+                        </div>
+                    </div>
+                     <div class="mb-8 flex w-full items-start md:items-center md:justify-between md:flex-row-reverse reveal">
+                        <div class="order-1 hidden md:block md:w-5/12"></div>
+                        <div class="z-20 order-1 flex shrink-0 items-center rounded-full bg-brand-gold shadow-xl w-12 h-12">
+                            <h1 class="mx-auto text-lg font-semibold text-brand-blue">Hoje</h1>
+                        </div>
+                        <div class="order-1 w-full flex-1 rounded-lg bg-gray-800 px-6 py-4 shadow-xl md:ml-0 md:w-5/12 ml-4">
+                            <h3 class="mb-3 text-xl font-bold text-brand-gold">Mentora e Especialista</h3>
+                            <p class="text-sm leading-snug tracking-wide text-gray-300">Além de perita, mentora de novos profissionais e especialista em casos de superendividamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="servicos" class="py-20 bg-brand-light">
+          <div class="container mx-auto px-6 text-center reveal">
+            <h2 class="text-4xl font-serif font-bold text-brand-blue mb-4">Áreas de Atuação</h2>
+            <p class="max-w-2xl mx-auto mb-12">Análise técnica e imparcial para diversas necessidades jurídicas e financeiras.</p>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div data-service="financeira" class="service-card p-8 rounded-lg shadow-lg cursor-pointer transition-all duration-300 bg-brand-blue text-white transform -translate-y-2">
+                    <div class="flex justify-center items-center"><i data-lucide="landmark" class="w-12 h-12 text-brand-gold mb-4"></i></div>
+                    <h3 class="text-2xl font-serif font-bold mb-2 text-brand-gold">Perícia Financeira</h3>
+                    <p class="text-gray-300">Análise de contratos, juros abusivos e cálculos complexos.</p>
+                </div>
+                <div data-service="trabalhista" class="service-card p-8 rounded-lg shadow-lg cursor-pointer transition-all duration-300 bg-white hover:shadow-2xl hover:-translate-y-2">
+                    <div class="flex justify-center items-center"><i data-lucide="briefcase" class="w-12 h-12 text-brand-gold mb-4"></i></div>
+                    <h3 class="text-2xl font-serif font-bold mb-2 text-brand-blue">Perícia Trabalhista</h3>
+                    <p class="text-brand-gray">Cálculos de verbas rescisórias, horas extras e insalubridade.</p>
+                </div>
+                <div data-service="superendividamento" class="service-card p-8 rounded-lg shadow-lg cursor-pointer transition-all duration-300 bg-white hover:shadow-2xl hover:-translate-y-2">
+                    <div class="flex justify-center items-center"><i data-lucide="shield-check" class="w-12 h-12 text-brand-gold mb-4"></i></div>
+                    <h3 class="text-2xl font-serif font-bold mb-2 text-brand-blue">Superendividamento</h3>
+                    <p class="text-brand-gray">Assessoria para renegociação de dívidas e proteção do patrimônio.</p>
+                </div>
+            </div>
+            <div id="service-details" class="bg-white p-8 md:p-12 rounded-lg shadow-inner text-left max-w-4xl mx-auto">
+            </div>
+          </div>
+        </section>
+        <section id="cases" class="py-20 bg-brand-blue text-white">
+          <div class="container mx-auto px-6">
+            <div class="text-center mb-12 reveal">
+              <h2 class="text-4xl font-serif font-bold mb-4 text-brand-gold">Resultados que Falam por Si</h2>
+              <p class="max-w-3xl mx-auto text-gray-300">Não se trata apenas de números, mas de transformar vidas e garantir direitos. Veja alguns exemplos práticos do nosso trabalho.</p>
+            </div>
+            <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+              <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-brand-gold/10 reveal">
+                <div class="mb-4">
+                  <h4 class="font-bold text-lg text-red-400 mb-2">O Problema</h4>
+                  <p class="text-gray-300 text-sm">Cliente com dívida de R$ 80.000 em financiamento de veículo, pagando parcelas com juros excessivos.</p>
+                </div>
+                <div class="mb-4">
+                  <h4 class="font-bold text-lg text-blue-400 mb-2">A Análise Pericial</h4>
+                  <p class="text-gray-300 text-sm">Análise pericial do contrato que identificou a capitalização de juros (anatocismo) e taxas não pactuadas.</p>
+                </div>
+                 <div class="mt-auto pt-4 border-t border-gray-700">
+                  <h4 class="font-bold text-lg text-brand-gold mb-2">O Resultado</h4>
+                  <p class="text-gray-200 font-semibold">Laudo pericial robusto que resultou na redução de 45% do saldo devedor e na economia de R$ 36.000 para o cliente.</p>
+                </div>
+              </div>
+              <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-brand-gold/10 reveal">
+                <div class="mb-4">
+                  <h4 class="font-bold text-lg text-red-400 mb-2">O Problema</h4>
+                  <p class="text-gray-300 text-sm">Advogado precisava de suporte técnico para impugnar um laudo judicial desfavorável em um caso trabalhista complexo.</p>
+                </div>
+                <div class="mb-4">
+                  <h4 class="font-bold text-lg text-blue-400 mb-2">A Análise Pericial</h4>
+                  <p class="text-gray-300 text-sm">Elaboração de um Parecer Técnico de Impugnação apontando falhas metodológicas e erros de cálculo no laudo original.</p>
+                </div>
+                 <div class="mt-auto pt-4 border-t border-gray-700">
+                  <h4 class="font-bold text-lg text-brand-gold mb-2">O Resultado</h4>
+                  <p class="text-gray-200 font-semibold">O juiz acatou as argumentações do parecer, determinou a realização de nova perícia e a sentença foi revertida em favor do cliente.</p>
+                </div>
+              </div>
+              <div class="bg-gray-800 p-8 rounded-lg shadow-lg flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-brand-gold/10 reveal">
+                <div class="mb-4">
+                  <h4 class="font-bold text-lg text-red-400 mb-2">O Problema</h4>
+                  <p class="text-gray-300 text-sm">Empresa enfrentando um processo de liquidação de sentença com valores de cálculo exorbitantes apresentados pela parte contrária.</p>
+                </div>
+                <div class="mb-4">
+                  <h4 class="font-bold text-lg text-blue-400 mb-2">A Análise Pericial</h4>
+                  <p class="text-gray-300 text-sm">Desenvolvimento de um Parecer Técnico de Liquidação de Sentença com a metodologia correta e aplicação dos índices de correção monetária adequados.</p>
+                </div>
+                 <div class="mt-auto pt-4 border-t border-gray-700">
+                  <h4 class="font-bold text-lg text-brand-gold mb-2">O Resultado</h4>
+                  <p class="text-gray-200 font-semibold">O cálculo apresentado foi homologado pelo juízo, gerando uma economia de mais de R$ 150.000 para a empresa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="audience" class="py-20 bg-white">
+          <div class="container mx-auto px-6 reveal">
+            <div class="text-center mb-12">
+              <h2 class="text-4xl font-serif font-bold text-brand-blue mb-4">Soluções Sob Medida</h2>
+              <p class="max-w-2xl mx-auto">Seja você um advogado buscando um parceiro técnico ou alguém precisando de ajuda, tenho a expertise para o seu caso.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-brand-blue p-8 rounded-lg shadow-xl text-white flex flex-col">
+                <h3 class="text-3xl font-serif font-bold text-brand-gold mb-4">Para Advogados e Escritórios</h3>
+                <p class="mb-6 flex-grow">Fortaleça seus processos com laudos periciais e pareceres técnicos robustos. Atuo como Assistente Técnica, elaborando quesitos estratégicos, analisando laudos da parte contrária e fornecendo a base técnica que você precisa para obter êxito.</p>
+                <a href="https://wa.me/5531985883978?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20uma%20especialista." target="_blank" rel="noopener noreferrer" class="mt-auto bg-brand-gold text-brand-blue font-bold py-3 px-6 rounded-full hover:bg-brand-gold/90 transition-all duration-300 text-center self-start transform hover:scale-105">Seja um Parceiro</a>
+              </div>
+              <div class="bg-brand-light p-8 rounded-lg shadow-xl border border-gray-200 flex flex-col">
+                <h3 class="text-3xl font-serif font-bold text-brand-blue mb-4">Para Você e Sua Empresa</h3>
+                <p class="text-brand-gray mb-6 flex-grow">Está com dívidas abusivas em contratos de financiamento? Tem dúvidas sobre seus direitos trabalhistas? Ofereço uma análise detalhada do seu caso para identificar irregularidades e buscar a solução mais justa, traduzindo o "juridiquês" de forma clara e objetiva.</p>
+                <a href="https://wa.me/5531985883978?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20uma%20especialista." target="_blank" rel="noopener noreferrer" class="mt-auto bg-brand-blue text-white font-bold py-3 px-6 rounded-full hover:bg-brand-blue/90 transition-all duration-300 text-center self-start transform hover:scale-105">Entenda seu Caso</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="livro" class="py-20 bg-brand-blue text-white">
+          <div class="container mx-auto px-6 reveal">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div class="flex justify-center md:justify-end">
+                 <img src="images/livro-capa.jpeg" alt="Perícia Bancária: Casos Práticos | Vol. 02" class="rounded-lg shadow-2xl w-full max-w-xs transform hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div>
+                <h2 class="text-4xl font-serif font-bold text-brand-gold mb-4">Meu Livro</h2>
+                <h3 class="text-3xl font-serif font-bold mb-4">Perícia Bancária: Casos Práticos | Vol. 02</h3>
+                <p class="mb-6 text-gray-300">Uma obra essencial que mergulha em casos reais do universo da perícia bancária, oferecendo insights valiosos e práticos para profissionais da área. Co-escrito com renomados especialistas, este livro é um guia indispensável.</p>
+                <p class="mb-8 text-sm text-gray-400">Co-autores: Simone Parra, Karla Britto, Quéli Ferreira, Tatiane Cardoso, Wellington Tarnoski, Manoel Salésio Mattos.</p>
+                <a href="https://www.editoradoyen.com.br/produto/pericia-bancaria-casos-praticos-vol-02/10000213" target="_blank" rel="noopener noreferrer" class="bg-brand-gold text-brand-blue font-bold py-3 px-8 rounded-full text-lg hover:bg-brand-gold/90 transition-all duration-300 transform hover:scale-105 inline-block">Adquira seu Exemplar</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="depoimentos" class="py-20 bg-brand-light">
+          <div class="container mx-auto px-6 reveal">
+            <div class="text-center mb-12">
+              <h2 class="text-4xl font-serif font-bold text-brand-blue mb-4">O que dizem os Clientes</h2>
+              <p class="max-w-2xl mx-auto">A satisfação de quem confia em nosso trabalho é nossa maior recompensa.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-white p-8 rounded-lg shadow-lg relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <div class="absolute top-4 right-4"><i data-lucide="quote" class="w-12 h-12 text-brand-gold opacity-10"></i></div>
+                <p class="text-brand-gray mb-6 italic relative z-10">"A Dra. Roseli foi fundamental para o sucesso do nosso caso. Sua análise técnica foi impecável e decisiva no tribunal."</p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center text-brand-blue font-bold text-xl mr-4">D</div>
+                  <div><p class="font-bold text-brand-blue">Dr. A. Santos</p><p class="text-sm text-gray-500">Advogado</p></div>
+                </div>
+              </div>
+              <div class="bg-white p-8 rounded-lg shadow-lg relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <div class="absolute top-4 right-4"><i data-lucide="quote" class="w-12 h-12 text-brand-gold opacity-10"></i></div>
+                <p class="text-brand-gray mb-6 italic relative z-10">"Consegui resolver uma questão de juros abusivos no meu financiamento graças ao trabalho minucioso da Roseli. Recomendo demais!"</p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center text-brand-blue font-bold text-xl mr-4">M</div>
+                  <div><p class="font-bold text-brand-blue">M. Oliveira</p><p class="text-sm text-gray-500">Cliente</p></div>
+                </div>
+              </div>
+              <div class="bg-white p-8 rounded-lg shadow-lg relative transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <div class="absolute top-4 right-4"><i data-lucide="quote" class="w-12 h-12 text-brand-gold opacity-10"></i></div>
+                <p class="text-brand-gray mb-6 italic relative z-10">"Profissional extremamente competente e didática. A mentoria com a Roseli abriu muitas portas na minha carreira como perita."</p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 bg-brand-gold rounded-full flex items-center justify-center text-brand-blue font-bold text-xl mr-4">J</div>
+                  <div><p class="font-bold text-brand-blue">J. Costa</p><p class="text-sm text-gray-500">Aluna de Mentoria</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="faq" class="py-20 bg-white">
+          <div class="container mx-auto px-6 reveal">
+            <div class="text-center mb-12">
+              <h2 class="text-4xl font-serif font-bold text-brand-blue mb-4">Perguntas Frequentes</h2>
+              <p class="max-w-2xl mx-auto">Esclarecendo suas principais dúvidas para que você tome a melhor decisão.</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+              <div class="faq-item border-b border-gray-200 py-4">
+                <button class="faq-question w-full flex justify-between items-center text-left focus:outline-none">
+                  <h3 class="text-lg font-semibold text-brand-blue">Preciso de um advogado para contratar seus serviços?</h3>
+                  <i data-lucide="chevron-down" class="w-6 h-6 text-brand-gold transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0 mt-0">
+                  <p class="text-brand-gray pr-6 pt-4">Não necessariamente. Para análises extrajudiciais e consultorias, você pode me contratar diretamente. Para atuação como Assistente Técnica em um processo judicial, a contratação é feita através do seu advogado.</p>
+                </div>
+              </div>
+              <div class="faq-item border-b border-gray-200 py-4">
+                <button class="faq-question w-full flex justify-between items-center text-left focus:outline-none">
+                  <h3 class="text-lg font-semibold text-brand-blue">Quanto tempo demora uma análise pericial?</h3>
+                  <i data-lucide="chevron-down" class="w-6 h-6 text-brand-gold transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0 mt-0">
+                  <p class="text-brand-gray pr-6 pt-4">O tempo varia conforme a complexidade do caso e a quantidade de documentos. Após uma análise inicial, forneço uma estimativa precisa do prazo para a conclusão do laudo ou parecer.</p>
+                </div>
+              </div>
+              <div class="faq-item border-b border-gray-200 py-4">
+                <button class="faq-question w-full flex justify-between items-center text-left focus:outline-none">
+                  <h3 class="text-lg font-semibold text-brand-blue">Quais documentos são necessários para iniciar uma análise?</h3>
+                  <i data-lucide="chevron-down" class="w-6 h-6 text-brand-gold transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0 mt-0">
+                  <p class="text-brand-gray pr-6 pt-4">Geralmente, contratos, extratos, planilhas e outros documentos relacionados ao caso. A lista exata será solicitada após o primeiro contato e entendimento da sua necessidade.</p>
+                </div>
+              </div>
+              <div class="faq-item border-b border-gray-200 py-4">
+                <button class="faq-question w-full flex justify-between items-center text-left focus:outline-none">
+                  <h3 class="text-lg font-semibold text-brand-blue">Você atende apenas em Belo Horizonte?</h3>
+                  <i data-lucide="chevron-down" class="w-6 h-6 text-brand-gold transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer overflow-hidden transition-all duration-500 ease-in-out max-h-0 mt-0">
+                  <p class="text-brand-gray pr-6 pt-4">Não, atendo clientes e advogados de todo o Brasil. Com a tecnologia atual, a maioria dos processos e análises pode ser conduzida de forma totalmente digital e remota.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contato" class="py-20 bg-brand-light">
+          <div class="container mx-auto px-6 reveal">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+              <h2 class="text-4xl font-serif font-bold text-brand-blue mb-4">Pronto para dar o próximo passo?</h2>
+              <p class="text-lg">Preencha o formulário abaixo ou utilize nossos outros canais de contato. Estou à disposição para analisar seu caso e encontrar a melhor solução.</p>
+            </div>
+            <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-2xl">
+              <div class="grid md:grid-cols-2 gap-10 mb-8">
+                <div class="space-y-4">
+                   <div class="flex items-start">
+                      <i data-lucide="map-pin" class="w-6 h-6 text-brand-gold mr-4 flex-shrink-0 mt-1"></i>
+                      <a href="https://maps.app.goo.gl/9ZfBw4Q1h8gM7z5z7" target="_blank" rel="noopener noreferrer" class="text-brand-gray hover:text-brand-blue transition-colors">R. dos Caetés, 530, Sala 707 - Centro, Belo Horizonte - MG, 30120-908</a>
+                    </div>
+                    <div class="flex items-center">
+                      <i data-lucide="phone" class="w-6 h-6 text-brand-gold mr-4"></i>
+                      <a href="tel:31985883978" class="text-brand-gray hover:text-brand-blue transition-colors">(31) 98588-3978</a>
+                    </div>
+                </div>
+                 <div class="flex items-start">
+                    <i data-lucide="clock" class="w-6 h-6 text-brand-gold mr-4 flex-shrink-0 mt-1"></i>
+                    <div class="text-brand-gray">
+                      <p>Segunda a Sexta: 08:00–17:00</p>
+                      <p>Sábado e Domingo: Fechado</p>
+                    </div>
+                  </div>
+              </div>
+              <form id="contact-form" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-brand-gray mb-1">Nome Completo</label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-100 border-gray-300 rounded-md focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all" />
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-sm font-medium text-brand-gray mb-1">Telefone / WhatsApp</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 bg-gray-100 border-gray-300 rounded-md focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all" />
+                  </div>
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium text-brand-gray mb-1">Melhor Email</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-100 border-gray-300 rounded-md focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all" />
+                </div>
+                <div>
+                  <label for="message" class="block text-sm font-medium text-brand-gray mb-1">Mensagem</label>
+                  <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-gray-100 border-gray-300 rounded-md focus:ring-2 focus:ring-brand-gold focus:border-brand-gold transition-all">Olá, gostaria de falar com uma especialista sobre meu caso.</textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-gold text-brand-blue font-bold py-4 px-6 rounded-full hover:bg-brand-gold/90 transition-all duration-300 text-lg flex items-center justify-center transform hover:scale-105">
+                   <i data-lucide="send" class="w-5 h-5 mr-3"></i>
+                  Enviar via WhatsApp
+                </button>
+              </form>
+            </div>
+             <div class="mt-12 rounded-lg overflow-hidden h-80 shadow-xl">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.091178696208!2d-43.93983612574514!3d-19.9197843388708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa699e0a5141501%3A0x839a9c53e83c7eb8!2sR.%20dos%20Caet%C3%A9s%2C%20530%20-%20Centro%2C%20Belo%20Horizonte%20-%20MG%2C%2030120-080!5e0!3m2!1spt-BR!2sbr!4v1718047913361!5m2!1spt-BR!2sbr"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer class="bg-brand-blue text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <a href="#inicio" class="focus:outline-none mb-4 mx-auto md:mx-0 inline-flex items-center space-x-3">
+                      <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="#0A192F"/>
+                        <path d="M38 75V25H55C65 25 70 30 70 40C70 50 65 55 55 55H46V47H55C60 47 62 45 62 40C62 35 60 33 55 33H46V75H38Z" fill="#D4AF37"/>
+                        <path d="M62 75V60C62 55 65 52 70 52C75 52 78 55 78 60V75H70V60C70 58 69 57 68 57C67 57 66 58 66 60V75H62Z" fill="#D4AF37" transform="translate(-15, 0) scale(1.2)"/>
+                      </svg>
+                      <span class="font-serif text-3xl font-bold tracking-wider">Roseli de Sales</span>
+                    </a>
+                    <p class="text-gray-400">Perita Judicial & Extrajudicial</p>
+                    <p class="text-gray-400 text-sm mt-4">CNPJ: 57.746.515/0001-52</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-brand-gold">Navegação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#sobre" class="text-gray-300 hover:text-brand-gold transition-colors">Sobre</a></li>
+                        <li><a href="#servicos" class="text-gray-300 hover:text-brand-gold transition-colors">Serviços</a></li>
+                        <li><a href="#cases" class="text-gray-300 hover:text-brand-gold transition-colors">Resultados</a></li>
+                        <li><a href="#livro" class="text-gray-300 hover:text-brand-gold transition-colors">Livro</a></li>
+                        <li><a href="#depoimentos" class="text-gray-300 hover:text-brand-gold transition-colors">Depoimentos</a></li>
+                        <li><a href="#contato" class="text-gray-300 hover:text-brand-gold transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-brand-gold">Contato</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>(31) 98588-3978</li>
+                        <li>R. dos Caetés, 530, Sala 707 - Centro, Belo Horizonte - MG, 30120-908</li>
+                    </ul>
+                    <div class="flex justify-center md:justify-start space-x-4 mt-6">
+                       <a href="https://www.instagram.com/roselisalesperita" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-gold transition-colors">
+                         <i data-lucide="instagram" class="w-6 h-6"></i>
+                         <span class="sr-only">Instagram</span>
+                       </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
+                <p>&copy; 2024 Roseli de Sales. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+        const header = document.getElementById('header');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('bg-brand-blue/90', 'shadow-lg', 'backdrop-blur-sm');
+            } else {
+                header.classList.remove('bg-brand-blue/90', 'shadow-lg', 'backdrop-blur-sm');
+            }
+        });
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('max-h-96');
+            header.classList.toggle('bg-brand-blue/90', isOpen);
+            header.classList.toggle('shadow-lg', isOpen);
+            header.classList.toggle('backdrop-blur-sm', isOpen);
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('max-h-96');
+                header.classList.remove('bg-brand-blue/90', 'shadow-lg', 'backdrop-blur-sm');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            });
+        });
+        const serviceData = {
+            financeira: {
+                title: "Perícia Financeira",
+                items: ["Perícia Financeira/Bancária", "Quesitos estratégicos", "Parecer Técnico Inicial", "Parecer Técnico de Impugnação", "Parecer Técnico de Liquidação de Sentença"]
+            },
+            trabalhista: {
+                title: "Perícia Trabalhista",
+                items: ["Perícia Trabalhista", "Quesitos estratégicos", "Parecer Técnico Inicial", "Parecer Técnico de Impugnação", "Parecer Técnico de Liquidação de Sentença"]
+            },
+            superendividamento: {
+                title: "Superendividamento",
+                items: ["Análise de situação financeira", "Elaboração de plano de pagamento", "Negociação com credores", "Orientação para evitar novas dívidas", "Suporte em processos de insolvência"]
+            }
+        };
+        const serviceCards = document.querySelectorAll('.service-card');
+        const serviceDetailsContainer = document.getElementById('service-details');
+        function updateServiceDetails(serviceKey) {
+            const data = serviceData[serviceKey];
+            let itemsHtml = data.items.map(item => `<li class="flex items-start"><i data-lucide="check-circle-2" class="w-6 h-6 text-brand-gold mr-3 flex-shrink-0 mt-1"></i><span>${item}</span></li>`).join('');
+            serviceDetailsContainer.innerHTML = `<h3 class="text-3xl font-serif font-bold text-brand-blue mb-6">${data.title}</h3><ul class="space-y-3">${itemsHtml}</ul>`;
+            lucide.createIcons();
+        }
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                serviceCards.forEach(c => {
+                    c.classList.remove('bg-brand-blue', 'text-white', 'transform', '-translate-y-2');
+                    c.classList.add('bg-white', 'hover:shadow-2xl', 'hover:-translate-y-2');
+                    c.querySelector('h3').classList.remove('text-brand-gold');
+                    c.querySelector('h3').classList.add('text-brand-blue');
+                    c.querySelector('p').classList.remove('text-gray-300');
+                    c.querySelector('p').classList.add('text-brand-gray');
+                });
+                card.classList.add('bg-brand-blue', 'text-white', 'transform', '-translate-y-2');
+                card.classList.remove('bg-white');
+                card.querySelector('h3').classList.add('text-brand-gold');
+                card.querySelector('h3').classList.remove('text-brand-blue');
+                card.querySelector('p').classList.add('text-gray-300');
+                card.querySelector('p').classList.remove('text-brand-gray');
+                updateServiceDetails(card.dataset.service);
+            });
+        });
+        updateServiceDetails('financeira');
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const icon = question.querySelector('i');
+            question.addEventListener('click', () => {
+                const isOpen = answer.classList.contains('max-h-96');
+                faqItems.forEach(i => {
+                    i.querySelector('.faq-answer').classList.remove('max-h-96', 'mt-4');
+                    i.querySelector('.faq-question i').classList.remove('rotate-180');
+                });
+                if (!isOpen) {
+                    answer.classList.add('max-h-96', 'mt-4');
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const text = `*Contato via Site*\n*Nome:* ${name}\n*Email:* ${email}\n*Telefone:* ${phone}\n*Mensagem:* ${message}`;
+            const whatsappUrl = `https://wa.me/5531985883978?text=${encodeURIComponent(text)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+        const animatedStats = document.querySelectorAll('.animated-stat');
+        const revealElements = document.querySelectorAll('.reveal');
+        const animateStat = (stat) => {
+            const target = +stat.dataset.target;
+            let count = 0;
+            const duration = 2000;
+            const stepTime = 20;
+            const totalSteps = duration / stepTime;
+            const increment = target / totalSteps;
+            const timer = setInterval(() => {
+                count += increment;
+                if (count >= target) {
+                    count = target;
+                    clearInterval(timer);
+                }
+                stat.innerText = `+${Math.floor(count)}`;
+            }, stepTime);
+        };
+        const observerOptions = {
+            root: null,
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('animated-stat') && !entry.target.dataset.animated) {
+                        animateStat(entry.target);
+                        entry.target.dataset.animated = 'true';
+                    }
+                }
+            });
+        }, observerOptions);
+        animatedStats.forEach(stat => observer.observe(stat));
+        revealElements.forEach(el => observer.observe(el));
+    });
+    </script>
+</body>
+</html>
